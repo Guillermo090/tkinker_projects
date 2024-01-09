@@ -12,6 +12,7 @@ class FormularioMaestroDesign(tk.Tk):
         self.perfil = util_img.leer_imagen("./imagenes/avatar.jpg", ( 100, 100))
         self.config_windows()
         self.paneles()
+        self.controles_barra_superior()
 
     def config_windows(self):
         # configuracion inicial de ventana
@@ -30,3 +31,17 @@ class FormularioMaestroDesign(tk.Tk):
 
         self.cuerpo_principal = tk.Frame( self, bg=COLOR_CUERPO_PRINCIPAL, width=150)
         self.cuerpo_principal.pack(side=tk.RIGHT, fill='both', expand=True)
+
+    def controles_barra_superior(self):
+        # configuración de la barra superior
+        font_awesome = font.Font(family='FontAwesome', size=12)
+
+        # etiqueta de titulo
+        self.labelTitulo = tk.Label(self.barra_superior, text='Autodidacta' )
+        self.labelTitulo.config(fg='#fff', font=("Roboto", 15), bg=COLOR_BARRA_SUPERIOR, pady=10, width=16)
+        self.labelTitulo.pack(side=tk.LEFT)
+
+        self.buttonMenuLateral = tk.Button(self.barra_superior, text="\uf0c9", font=font_awesome, bd=0, bg=COLOR_BARRA_SUPERIOR, fg="white")
+        self.buttonMenuLateral.pack(side=tk.LEFT)
+
+        
