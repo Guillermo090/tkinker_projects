@@ -8,3 +8,4 @@ Asegúrate de tener Python 3.x instalado en tu sistema. Puedes instalar las depe
 
 ```bash
 pip install -r requirements.txt
+```
